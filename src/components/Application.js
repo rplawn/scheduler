@@ -5,24 +5,7 @@ import DayList from "components/DayList";
 import Appointment from "components/Appointment"
 
 
-//Days array
-const days = [
-  {
-    id: 1,
-    name: "Monday",
-    spots: 2,
-  },
-  {
-    id: 2,
-    name: "Tuesday",
-    spots: 5,
-  },
-  {
-    id: 3,
-    name: "Wednesday",
-    spots: 0,
-  },
-];
+//Removed days array
 
 //mock appointment data
 const appointments = {
@@ -66,6 +49,16 @@ const appointments = {
 
 export default function Application(props) {
   const [day, setDay] = useState("Monday");
+  const [days, setDays] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:8001/api/days")
+    .then(res => {
+      setDays(res.data)
+    })
+    .catch(err => console.log(err))
+  }, [])
+
     const appointmentArr = Object.values(appointments).map(appt => {
       return (
         <Appointment
