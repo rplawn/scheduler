@@ -19,8 +19,8 @@ const CREATE = "CREATE";
 const SAVING = "SAVING";
 const DELETING = "DELETING";
 const EDIT = "EDIT";
-const ERROR_SAVE="ERROR_SAVE";
-const ERROR_DELETE="ERROR_DELETE"
+const ERROR_SAVE = "ERROR_SAVE";
+const ERROR_DELETE = "ERROR_DELETE"
 
 
 export default function Appointment(props) {
@@ -33,20 +33,22 @@ export default function Appointment(props) {
       student: name,
       interviewer
     };
+
     transition(SAVING);
 
-    props.bookInterview(props.id, interview).then(() => {
-      transition(SHOW);
+    props
+      .bookInterview(props.id, interview)
+      .then(() => transition(SHOW))
+      .catch(error => transition(ERROR_SAVE, true));
 
-    }
-    );
   };
 
   function handleDelete() {
     transition(DELETING, true);
-    props.cancelInterview(props.id)
-    .then(() => { transition(EMPTY)})
-    // .catch(() => transition())
+    props
+      .cancelInterview(props.id)
+      .then(() => transition(EMPTY))
+      .catch(error => transition(ERROR_DELETE, true));
   };
 
   // function edit() {
@@ -102,6 +104,16 @@ export default function Appointment(props) {
         onSave={save}
         onCancel={back}
         interviewer={props.interview.interviewer.id}
+      />}
+
+      {mode === ERROR_DELETE && <Error
+        message="There was an error cancelling your appointment. Please try again."
+        onClose={back}
+      />}
+
+      {mode === ERROR_SAVE && <Error
+        message="There was an error booking your appointment. Please try again."
+        onClose={back}
       />}
 
     </article>
