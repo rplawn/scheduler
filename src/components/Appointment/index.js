@@ -53,6 +53,7 @@ export default function Appointment(props) {
         interviewers={[]}
         onSave={props.onSave}
         onCancel={back}
+        bookInterview={props.bookInterview}
         // student={""}
         // interviewer={props.interviewer}
       />}

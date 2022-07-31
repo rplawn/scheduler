@@ -8,6 +8,10 @@ import useVisualMode from "hooks/useVisualMode";
 
 export default function Application(props) {
 
+  function bookInterview(id, interview) {
+    console.log(id, interview);
+  }
+
   const [state, setState] = useState({
     day: "Monday",
     days: [],
@@ -35,6 +39,7 @@ export default function Application(props) {
         <Appointment
           key={appt.id}
           interviewers={state.interviewers}
+          bookInterview={bookInterview}
           {...appt}
         />)
     }
@@ -64,7 +69,7 @@ export default function Application(props) {
       </section>
       <section className="schedule">
         {appointmentArr} 
-        <Appointment key="last" time="5pm" />
+        <Appointment key="last" time="5pm" bookInterview={bookInterview}/>
       </section>
     </main>
   );
