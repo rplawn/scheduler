@@ -34,6 +34,11 @@ export default function Appointment(props) {
       interviewer
     };
 
+    if(!interviewer) {
+      alert("You did not pick an interviewer");
+      return;
+    }
+
     transition(SAVING);
 
     props
