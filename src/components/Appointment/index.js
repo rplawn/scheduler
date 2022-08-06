@@ -82,8 +82,7 @@ export default function Appointment(props) {
         onClose={props.onClose} />}
 
       {mode === CREATE && <Form
-        name={props.name}
-        // interviewer={""}
+        // student={props.interview.student}
         interviewers={props.interviewers}
         onSave={save}
         onCancel={back}
@@ -98,7 +97,7 @@ export default function Appointment(props) {
       />}
 
       {mode === EDIT && <Form
-        student={props.interview.student}
+        name={props.interview.student}
         value={props.value}
         interviewers={props.interviewers}
         onSave={save}
