@@ -9,7 +9,6 @@ export default function useVisualMode(initial) {
       setHistory(prev => [...prev.slice(0, history.length-1), mode])
     } else {
       setHistory(prev => [...prev, mode])
-      // setHistory([...history, mode])
     }
 
     setMode(mode);
@@ -18,12 +17,9 @@ export default function useVisualMode(initial) {
     if (history.length < 2) {
       return;
     }
-    //minus the last item from history
-    const test = [...history.slice(0, -1)]
-    // console.log("looking for this", test)
-    
-    setHistory(test)
-    setMode(test[test.length-1])
+    const backOne = [...history.slice(0, -1)]
+    setHistory(backOne)
+    setMode(backOne[backOne.length-1])
  
   };
 
