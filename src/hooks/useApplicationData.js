@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import spotsRemaining from "helpers/spots";
 
 
 export default function useApplicationData() {
@@ -39,14 +40,17 @@ export default function useApplicationData() {
       [id]: appointment,
     };
 
+
     return axios
       .put(`http://localhost:8001/api/appointments/${id}`, { interview })
       .then((res) => {
+        console.log("book interview res", res);
         if (res.status === 204) {
-          setState({
-            ...state,
+          setState( prev => ({
+            ...prev,
             appointments,
-          });
+            days: spotsRemaining(prev.day, prev.days, appointments)
+          }));
         }
       });
   }
@@ -64,10 +68,12 @@ export default function useApplicationData() {
     return axios
       .delete(`http://localhost:8001/api/appointments/${id}`)
       .then((res) => { 
-          setState({
-            ...state,
+        console.log("res", res)
+          setState( prev => ( { 
+            ...prev,
             appointments,
-          });
+            days: spotsRemaining(prev.day, prev.days, appointments)
+          }));
         return res;
       });
   }
