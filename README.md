@@ -22,10 +22,19 @@ Interview Scheduler is a single-page application (SPA) that allows users to book
 
 ## Screenshots
 !["Appointment Booking View"](https://github.com/rplawn/scheduler/blob/2ddcb32c4fdf73ef33802cf3fb8ff45ace5c53c1/docs/screenshots/Appointment%20Booking%20View.png)
+Appointment Booking View
+
 !["Confirmed Appointment View with option to delete or edit"](https://github.com/rplawn/scheduler/blob/2ddcb32c4fdf73ef33802cf3fb8ff45ace5c53c1/docs/screenshots/Confirmed%20Appointment%20View%20with%20edit%20or%20delete%20option.png)
+Confirmed Appointment View with option to delete or edit
+
 !["Delete Appointment Confirmation"](https://github.com/rplawn/scheduler/blob/2ddcb32c4fdf73ef33802cf3fb8ff45ace5c53c1/docs/screenshots/Delete%20confirmation.png)
+Delete Appointment Confirmation
+
 !["Error if no interviewer is chosen"](https://github.com/rplawn/scheduler/blob/2ddcb32c4fdf73ef33802cf3fb8ff45ace5c53c1/docs/screenshots/Must%20pick%20interviewer.png)
+Error if no interviewer is chosen 
+
 !["Error if no student name entered when creating appointment"](https://github.com/rplawn/scheduler/blob/2ddcb32c4fdf73ef33802cf3fb8ff45ace5c53c1/docs/screenshots/Student%20name%20cannot%20be%20blank.png)
+Error if no student name is entered when creating the appointment
 
 ## Setup
 
