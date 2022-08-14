@@ -22,25 +22,25 @@ Interview Scheduler is a single-page application (SPA) that allows users to book
 
 ## Screenshots
 
-## Homepage Appointment Booking
+### Homepage Appointment Booking
 !["Appointment Booking View"](https://github.com/rplawn/scheduler/blob/2ddcb32c4fdf73ef33802cf3fb8ff45ace5c53c1/docs/screenshots/Appointment%20Booking%20View.png)
-_Appointment Booking View
+_Appointment Booking View_
 
-## Succesfully Booked Appointment 
+### Succesfully Booked Appointment 
 !["Confirmed Appointment View with option to delete or edit"](https://github.com/rplawn/scheduler/blob/2ddcb32c4fdf73ef33802cf3fb8ff45ace5c53c1/docs/screenshots/Confirmed%20Appointment%20View%20with%20edit%20or%20delete%20option.png)
-_Confirmed Appointment View with option to delete or edit
+_Confirmed Appointment View with option to delete or edit_
 
-## Confirmation Check when making edits
+### Confirmation Check when making edits
 !["Delete Appointment Confirmation"](https://github.com/rplawn/scheduler/blob/2ddcb32c4fdf73ef33802cf3fb8ff45ace5c53c1/docs/screenshots/Delete%20confirmation.png)
-_Delete Appointment Confirmation
+_Delete Appointment Confirmation_
 
-## Edge Case
+### Edge Case
 !["Error if no interviewer is chosen"](https://github.com/rplawn/scheduler/blob/2ddcb32c4fdf73ef33802cf3fb8ff45ace5c53c1/docs/screenshots/Must%20pick%20interviewer.png)
-_Error if no interviewer is chosen 
+_Error if no interviewer is chosen_ 
 
-## Edge Case
+### Edge Case
 !["Error if no student name entered when creating appointment"](https://github.com/rplawn/scheduler/blob/2ddcb32c4fdf73ef33802cf3fb8ff45ace5c53c1/docs/screenshots/Student%20name%20cannot%20be%20blank.png)
-_Error if no student name is entered when creating the appointment
+_Error if no student name is entered when creating the appointment_
 
 
 ## Setup
